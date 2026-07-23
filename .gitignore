@@ -1,18 +1,32 @@
-# Ambiente virtual
+# Virtual Environment
 .venv/
 
-# Cache do Python
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
 
-# Configurações do VS Code
+# VS Code
 .vscode/
 
-# Banco de dados local
-*.db
+# Environment
+.env
 
-# Arquivos temporários
+# Logs
 *.log
 
-# Variáveis de ambiente
-.env
+# SQLite
+*.db
+
+# Dados gerados
+data/raw/*
+data/processed/*
+data/database/*
+
+# Manter a estrutura
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/database/.gitkeep
+
+# Sistema
+.DS_Store
+Thumbs.db
