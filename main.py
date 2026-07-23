@@ -1,21 +1,9 @@
-from src.sources.books_source import BooksSource
-from src.transform.dataframe import to_dataframe
-from src.load.csv_writer import save_csv
+from src.pipeline.job_pipeline import run_pipeline
 
 
-def main():
-    source = BooksSource()
-
-    jobs = source.get_jobs()
-
-    df = to_dataframe(jobs)
-
-    save_csv(
-        df,
-        "data/processed/jobs.csv"
-    )
-
-    print(df.head())
+def main() -> None:
+    """Executa o pipeline de busca de vagas."""
+    run_pipeline()
 
 
 if __name__ == "__main__":
